@@ -52,7 +52,7 @@ export default function HeroFullScrollMockup() {
           />
 
           {/* Scrollable content */}
-          <div className="absolute top-[85px] left-[30px] w-[260px] h-[470px] overflow-hidden rounded-xl z-0">
+          <div className="absolute top-[85px] left-[30px] w-[260px] h-[510px] overflow-hidden rounded-4xl z-0">
             <motion.img
               src="/images/mockup1.jpg"
               alt="App Screen"
