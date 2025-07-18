@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Montserrat, Knewave } from "next/font/google";
+import { Knewave, Inter } from "next/font/google";
 import Navbar from "@/components/layout/navbar";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Navbar />
         {children}
       </body>

@@ -21,10 +21,10 @@ export default function HeroFullScrollMockup() {
       className="h-[500vh] relative bg-white pt-[116px]"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-10 flex flex-col items-center text-center">
-        <h1 className="font-bold gradient-text text-[64px]">
+        <h1 className="font-extrabold gradient-text text-[64px]">
           Powerful solutions
         </h1>
-        <h1 className="font-bold gradient-text text-[64px]">
+        <h1 className="font-extrabold gradient-text text-[64px]">
           with seamless payment
         </h1>
         <p className="text-[22px] mt-6">
