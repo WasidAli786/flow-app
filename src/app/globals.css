@@ -8,6 +8,10 @@
   scrollbar-width: none;
 }
 
+/* body{
+  background: #F7F7F9;
+} */
+
 @layer utilities {
   .gradient-text {
     background-image: linear-gradient(
@@ -25,5 +29,24 @@
     max-width: 1080px;
     width: 1080px;
     margin-inline: auto;
+  }
+  .smart-track-card {
+    background: linear-gradient(
+      165.75267095019893deg,
+      rgb(253, 220, 91) 0%,
+      rgb(255, 166, 39) 50%,
+      rgb(255, 102, 98) 100%
+    );
+  }
+
+  .noFee-card {
+    background: linear-gradient(0deg, #1abcfa, #1c7df3);
+  }
+  .daily-cash-card {
+    background: linear-gradient(
+      180deg,
+      #8be962 28.999999165534973%,
+      #6cd179 87.00000047683716%
+    );
   }
 }
