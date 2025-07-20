@@ -46,7 +46,7 @@ const FullStory = () => {
   return (
     <div
       ref={containerRef}
-      className="responsive-container relative h-[350vh]x mt-20"
+      className="responsive-container relative h-[350vh] mt-20"
     >
       <h2 className="font-bold text-5xl">
         Explore <br />
