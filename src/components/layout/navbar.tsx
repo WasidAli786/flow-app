@@ -8,6 +8,7 @@ import { AppleIcon, GooglePlayStoreIcon } from "../ui/icons";
 import { Menu, MoveRight, X } from "lucide-react";
 import { navItems } from "@/site";
 import useScrollDirection from "@/hooks/use-scroll-direction";
+import { knewave } from "@/site/fonts";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -35,7 +36,9 @@ const Navbar = () => {
                   className="rounded-full"
                 />
               </div>
-              <h2 className="text-2xl font-bold">AppFlow</h2>
+              <h2 className={`text-2xl font-bold ${knewave.className}`}>
+                AppFlow
+              </h2>
             </div>
 
             <ul className="hidden lg:flex items-center gap-8">

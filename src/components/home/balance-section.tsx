@@ -13,9 +13,6 @@ const BalanceSection = () => {
     offset: ["start end", "end start"],
   });
 
-  // Background section animation - starts lower and moves up
-  const sectionY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-
   // Image parallax animation - starts lower and moves up more
   const imageY = useTransform(scrollYProgress, [0, 1], [100, -150]);
 

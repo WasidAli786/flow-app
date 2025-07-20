@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Knewave, Inter } from "next/font/google";
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import { inter } from "@/site/fonts";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  fallback: ["system-ui", "arial"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +19,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
