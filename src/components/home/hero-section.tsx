@@ -18,16 +18,16 @@ export default function HeroFullScrollMockup() {
   return (
     <section
       ref={sectionRef}
-      className="h-[500vh] relative bg-white pt-[116px]"
+      className="h-[200vh] relative bg-white pt-[116px]"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-10 flex flex-col items-center text-center">
-        <h1 className="font-extrabold gradient-text text-[64px]">
+        <h1 className="font-extrabold gradient-text text-[8vw] sm:text-[64px] leading-tight">
           Powerful solutions
         </h1>
-        <h1 className="font-extrabold gradient-text text-[64px]">
+        <h1 className="font-extrabold gradient-text text-[8vw] sm:text-[64px] leading-tight">
           with seamless payment
         </h1>
-        <p className="text-[22px] mt-6">
+        <p className="text-[5vw] sm:text-[22px] mt-6 max-w-3xl">
           Financial experience with Appflow, the platform for those who expect
           more from their money. Discover the smarter way to manage your
           finances today.
@@ -46,7 +46,7 @@ export default function HeroFullScrollMockup() {
               transformPerspective: "1000px",
               willChange: "transform",
             }}
-            className="relative w-[600px] h-[850px]"
+            className="relative w-[320px] xs:w-[90vw] max-w-[600px] aspect-[6/8.5]"
           >
             <img
               src="/images/mockup-frame.png"
@@ -54,7 +54,7 @@ export default function HeroFullScrollMockup() {
               className="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none"
             />
 
-            <div className="absolute top-[45px] left-[124px] w-[350px] h-[755px] rounded-[40px] overflow-hidden z-0">
+            <div className="absolute top-[5%] left-[20%] w-[60%] h-[88.8%] rounded-[6.5%] overflow-hidden z-0">
               <motion.img
                 src="/images/mockup1.jpg"
                 alt="App Screen"

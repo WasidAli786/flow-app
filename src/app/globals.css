@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 320px; /* Extra small phones */
+  --breakpoint-sm: 480px; /* Small phones */
+  --breakpoint-md: 768px; /* Tablets */
+  --breakpoint-lg: 976px; /* Small laptops */
+  --breakpoint-xl: 1200px; /* Desktop */
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -26,9 +34,7 @@
     -webkit-text-fill-color: transparent;
   }
   .responsive-container {
-    max-width: 1080px;
-    width: 1080px;
-    margin-inline: auto;
+    @apply max-w-[30rem] md:max-w-[74rem] mx-auto px-10;
   }
   .smart-track-card {
     background: linear-gradient(
@@ -48,5 +54,18 @@
       #8be962 28.999999165534973%,
       #6cd179 87.00000047683716%
     );
+  }
+  .animate-moveUpDown {
+    animation: moveUpDown 4s infinite;
+  }
+
+  @keyframes moveUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(40px);
+    }
   }
 }

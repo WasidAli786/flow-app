@@ -25,7 +25,7 @@ const SmartTrack = () => {
     <div ref={sectionRef} className="responsive-container mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <motion.div
-          className="smart-track-card rounded-[40px] p-10 flex flex-col justify-center text-center"
+          className="smart-track-card rounded-[20px] md:rounded-[40px] p-5 md:p-10 flex flex-col justify-center text-center"
           style={{ y: smoothCardY }}
         >
           <h2 className="text-[40px] font-bold text-white">Smart Track</h2>

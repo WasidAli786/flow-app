@@ -36,7 +36,7 @@ const cards = [
   },
 ];
 
-// Duplicate cards enough times to ensure seamless scroll
+// Duplicate cards to allow infinite scroll effect
 const duplicatedCards = [...cards, ...cards, ...cards];
 
 const FinanceCarousal = () => {
@@ -60,26 +60,43 @@ const FinanceCarousal = () => {
   return (
     <div>
       <div className="responsive-container mt-10 px-4">
-        <h2 className="font-bold text-5xl">
+        <h2 className="font-bold text-4xl sm:text-5xl leading-tight">
           More for <br />
           your finances.
         </h2>
       </div>
+
       <div className="overflow-hidden w-full py-10">
         <div ref={containerRef} className="w-full relative">
-          <div ref={wrapperRef} className="flex gap-6 will-change-transform">
+          <div
+            ref={wrapperRef}
+            className="flex gap-4 sm:gap-6 will-change-transform"
+          >
             {duplicatedCards.map((card, index) => (
               <div
                 key={index}
-                className="w-[calc(100%/4.5)] rounded-[28px] p-[30px] bg-white shadow flex-shrink-0"
+                className="
+                  w-[80vw] 
+                  sm:w-[calc(100%/2.5)] 
+                  md:w-[calc(100%/3.5)] 
+                  lg:w-[calc(100%/4.5)] 
+                  bg-white shadow 
+                  rounded-[20px] sm:rounded-[28px] 
+                  p-5 sm:p-[30px] 
+                  flex-shrink-0
+                "
               >
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-12 h-12 mb-4 object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 mb-4 object-contain"
                 />
-                <h3 className="text-[22px] font-semibold mb-1">{card.title}</h3>
-                <p className="text-lg">{card.description}</p>
+                <h3 className="text-lg sm:text-[22px] font-semibold mb-1">
+                  {card.title}
+                </h3>
+                <p className="text-sm sm:text-lg text-gray-600">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>

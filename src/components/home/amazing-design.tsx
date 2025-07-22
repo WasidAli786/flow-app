@@ -22,26 +22,83 @@ const AmazingDesign = () => {
     mass: 1,
   });
 
+  const walletIconBottom = useTransform(
+    scrollYProgress,
+    [0.2, 0.5],
+    [-84, 236]
+  ); // Center position relative to container
+  const dollarIconBottom = useTransform(
+    scrollYProgress,
+    [0.2, 0.5],
+    [-64, 356]
+  ); // Slightly higher position
+
+  const springWalletBottom = useSpring(walletIconBottom, {
+    stiffness: 500,
+    damping: 60,
+    mass: 1,
+  });
+
+  const springDollarBottom = useSpring(dollarIconBottom, {
+    stiffness: 500,
+    damping: 60,
+    mass: 1,
+  });
+
+  const rightImageY = useTransform(scrollYProgress, [0, 1], [50, -0]);
+
   return (
     <div ref={containerRef} className="responsive-container relative h-[120vh]">
-      <h2 className="text-[#cccccc] font-bold text-[80px]">
+      <h2 className="text-[#cccccc] font-bold text-[7vw] lg:text-[80px] lg:leading-20">
         Meet the <br />
         New Design
       </h2>
+      <motion.p
+        style={{ opacity: textOpacity }}
+        className="text-lg lg:text-[26px] mt-5 md:font-semibold z-50 block md:hidden"
+      >
+        With AppFlow, we completely reinvented the credit card. Your information
+        lives on your app, beautifully laid out and easy to understand.
+      </motion.p>
 
-      <div className="relative mt-10">
-        <div className="grid grid-cols-2 z-50 relative">
-          <div className="relative h-[710px] z-50">
+      <div className="bg-[#f5f5f7] rounded-[20px] mt-5 p-5 block md:hidden">
+        <div className="flex flex-col justify-center">
+          <div className="relative h-20 w-20">
+            <NextImage
+              src="/images/design-logo.png"
+              alt="logo"
+              className="rounded-2xl"
+            />
+          </div>
+          <h6 className="text-[4vw] lg:text-5xl font-bold mt-4 leading-tight">
+            Design Amazing <br />
+            Interfaces
+          </h6>
+        </div>
+        <div className="relative h-[700px]">
+          <motion.img
+            src="/images/mockup2.png"
+            alt="Phone Frame"
+            className="w-full h-full object-cover"
+            style={{ y: rightImageY }}
+            viewport={{ once: true }}
+          />
+        </div>
+      </div>
+
+      <div className="relative mt-10 hidden md:block">
+        <div className="grid grid-cols-2 relative">
+          <div className="relative h-[710px] z-10">
             <img
               src="/images/mockup2.png"
               alt="Phone Frame"
-              className="w-full h-full object-contain relative z-50"
+              className="w-full h-full object-contain"
             />
           </div>
 
           <motion.p
             style={{ opacity: textOpacity }}
-            className="text-[26px] mt-[40%] font-semibold z-50"
+            className="text-[26px] mt-[40%] font-semibold z-50 hidden md:block"
           >
             With AppFlow, we completely reinvented the credit card. Your
             information lives on your app, beautifully laid out and easy to
@@ -49,11 +106,46 @@ const AmazingDesign = () => {
           </motion.p>
         </div>
 
+        {/* Floating Icons - positioned outside background container */}
+        <motion.div
+          style={{ bottom: springWalletBottom }}
+          className="absolute left-20 z-[60] rounded-[28px] p-5 shadow-lg w-fit bg-white flex items-center gap-2 animate-moveUpDown"
+        >
+          <div className="rounded-full bg-[#FFA728] p-2">
+            <img
+              src="/images/wallet-icon.svg"
+              alt="wallet-icon"
+              className="h-7 w-7"
+            />
+          </div>
+          <div className="w-20 animate-pulse space-y-2">
+            <div className="h-2 bg-gray-300 rounded w-full"></div>
+            <div className="h-2 bg-gray-300 rounded w-3/4"></div>
+          </div>
+        </motion.div>
+        <motion.div
+          style={{ bottom: springDollarBottom }}
+          className="absolute right-[55%] z-[60] rounded-[28px] p-5 shadow-lg w-fit bg-white flex flex-col items-center gap-2 animate-moveUpDown"
+        >
+          <div className="rounded-full bg-[#FF6662] p-2">
+            <img
+              src="/images/dollar-icon.svg"
+              alt="wallet-icon"
+              className="h-7 w-7"
+            />
+          </div>
+          <div className="w-28 animate-pulse flex flex-col items-center gap-2">
+            <div className="h-2 bg-gray-300 rounded w-full"></div>
+            <div className="h-2 bg-gray-300 rounded w-3/4"></div>
+            <div className="h-2 bg-gray-300 rounded w-3/5"></div>
+          </div>
+        </motion.div>
+
         <motion.div
           style={{ bottom: springBottom }}
-          className="bg-[#f5f5f7] grid grid-cols-2 gap-20 rounded-[40px] h-[600px] absolute w-full z-40"
+          className="bg-[#f5f5f7] grid grid-cols-2 gap-20 rounded-[40px] h-[600px] absolute w-full -z-50"
         >
-          <div></div>
+          <div className="relative"></div>
           <div className="flex flex-col justify-center">
             <div className="relative h-24 w-24">
               <NextImage

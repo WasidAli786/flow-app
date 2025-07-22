@@ -46,13 +46,34 @@ const FullStory = () => {
   return (
     <div
       ref={containerRef}
-      className="responsive-container relative h-[350vh] mt-20"
+      className="responsive-container relative md:h-[350vh] mt-20"
     >
-      <h2 className="font-bold text-5xl">
+      <h2 className="font-bold text-[5vw] md:text-5xl">
         Explore <br />
         the full story.
       </h2>
-      <div className="sticky top-0 h-screen flex items-start">
+      <div>
+        <div className="relative h-[700px] block md:hidden">
+          <img
+            src="/images/mockup2.png"
+            alt="Phone Frame"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="space-y-6 block md:hidden">
+          {icons.map((icon, index) => (
+            <div key={index} className="flex items-center space-x-4">
+              <img
+                src={icon}
+                alt={`Icon ${index + 1}`}
+                className="w-18 h-18 object-contain"
+              />
+              <p className="text-xl font-semibold">{texts[index]}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="sticky top-0 h-screen hidden md:flex items-start">
         <div className="w-full flex justify-between items-start">
           <div className="relative h-[800px] overflow-hidden">
             <motion.div

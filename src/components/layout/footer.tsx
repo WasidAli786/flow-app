@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <>
       <footer className="responsive-container divide-y divide-gray-300 space-y-4 mt-10 mb-6">
-        <div className="flex items-center justify-between !pb-4">
+        <div className="flex items-center flex-col gap-10 md:flex-row justify-between !pb-4">
           <div className="flex items-center gap-2">
             <div className="relative h-14 w-14 rounded-full">
               <NextImage
@@ -51,11 +51,11 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center flex-col gap-4 md:flex-row justify-between">
           <p className="text-[#666666]">
             All rights reserved. © 2024 by Tin Kolza
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center flex-col gap-4 md:flex-row">
             <Link href="/privacy-policy" className="text-[#666666]">
               Privacy Policy
             </Link>
