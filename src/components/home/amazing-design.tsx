@@ -48,17 +48,16 @@ const AmazingDesign = () => {
   const rightImageY = useTransform(scrollYProgress, [0, 1], [50, -0]);
 
   return (
-    <div ref={containerRef} className="responsive-container relative h-[120vh]">
-      <h2 className="text-[#cccccc] font-bold text-[7vw] lg:text-[80px] lg:leading-20">
-        Meet the <br />
-        New Design
+    <div ref={containerRef} className="responsive-container relative h-[155vh]">
+      <h2 className="text-black font-bold text-[7vw] lg:text-[64px] lg:leading-20">
+        Find. List. Earn.
       </h2>
       <motion.p
         style={{ opacity: textOpacity }}
         className="text-lg lg:text-[26px] mt-5 md:font-semibold z-50 block md:hidden"
       >
-        With AppFlow, we completely reinvented the credit card. Your information
-        lives on your app, beautifully laid out and easy to understand.
+        From personalized recommendations to secure messaging and real-time
+        availability, AI helps make every step faster, safer, and easier.
       </motion.p>
 
       <div className="bg-[#f5f5f7] rounded-[20px] mt-5 p-5 block md:hidden">
@@ -71,8 +70,8 @@ const AmazingDesign = () => {
             />
           </div>
           <h6 className="text-[4vw] lg:text-5xl font-bold mt-4 leading-tight">
-            Design Amazing <br />
-            Interfaces
+            Made for People <br />
+            Who Move
           </h6>
         </div>
         <div className="relative h-[700px]">
@@ -100,9 +99,8 @@ const AmazingDesign = () => {
             style={{ opacity: textOpacity }}
             className="text-[26px] mt-[40%] font-semibold z-50 hidden md:block"
           >
-            With AppFlow, we completely reinvented the credit card. Your
-            information lives on your app, beautifully laid out and easy to
-            understand.
+            From personalized recommendations to secure messaging and real-time
+            availability, AI helps make every step faster, safer, and easier.
           </motion.p>
         </div>
 
@@ -155,9 +153,8 @@ const AmazingDesign = () => {
               />
             </div>
             <h6 className="text-5xl font-bold mt-4 leading-tight">
-              Design <br />
-              Amazing <br />
-              Interfaces
+              Made for People <br />
+              Who Move
             </h6>
           </div>
         </motion.div>

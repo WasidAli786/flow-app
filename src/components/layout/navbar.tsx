@@ -56,29 +56,44 @@ const Navbar = () => {
               })}
             </ul> */}
 
-            <button className="hidden lg:flex group relative bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe] overflow-hidden items-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
-              <div className="flex items-center gap-2 transform transition-transform duration-300 group-hover:-translate-x-4">
-                <span className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
+              <button className="hidden lg:flex group relative bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe] overflow-hidden items-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
+                <div className="flex items-center gap-2 transform transition-transform duration-300 group-hover:-translate-x-4">
+                  {/* <span className="flex items-center gap-1">
                   <AppleIcon className="text-4xl" />
                   <GooglePlayStoreIcon className="text-3xl" />
+                </span> */}
+                  Become a Broker
+                </div>
+                <span className="absolute right-4 opacity-0 transform translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                  <MoveRight className="ml-2" />
                 </span>
-                Download App
-              </div>
-              <span className="absolute right-4 opacity-0 transform translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                <MoveRight className="ml-2" />
-              </span>
-            </button>
+              </button>
 
-            <button
-              className="lg:hidden cursor-pointer p-2"
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              {menuOpen ? (
-                <X className="h-8 w-8 text-[#ffa727]" />
-              ) : (
-                <Menu className="h-8 w-8 text-[#ffa727]" />
-              )}
-            </button>
+              <button className="hidden lg:flex group relative bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe] overflow-hidden items-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
+                <div className="flex items-center gap-2 transform transition-transform duration-300 group-hover:-translate-x-4">
+                  {/* <span className="flex items-center gap-1">
+                  <AppleIcon className="text-4xl" />
+                  <GooglePlayStoreIcon className="text-3xl" />
+                </span> */}
+                  Become a Affiliate Agent
+                </div>
+                <span className="absolute right-4 opacity-0 transform translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                  <MoveRight className="ml-2" />
+                </span>
+              </button>
+
+              <button
+                className="lg:hidden cursor-pointer p-2"
+                onClick={() => setMenuOpen((prev) => !prev)}
+              >
+                {menuOpen ? (
+                  <X className="h-8 w-8 text-[#ffa727]" />
+                ) : (
+                  <Menu className="h-8 w-8 text-[#ffa727]" />
+                )}
+              </button>
+            </div>
           </div>
 
           <div
@@ -132,11 +147,11 @@ const Navbar = () => {
               >
                 <button className="w-full group relative bg-[#ffa727] overflow-hidden flex items-center justify-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
                   <div className="flex items-center gap-2 transform transition-transform duration-300 group-hover:-translate-x-4">
-                    <span className="flex items-center gap-1">
+                    {/* <span className="flex items-center gap-1">
                       <AppleIcon className="text-4xl" />
                       <GooglePlayStoreIcon className="text-3xl" />
-                    </span>
-                    Download App
+                    </span> */}
+                    Become a Broker
                   </div>
                   <span className="absolute right-4 opacity-0 transform translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
                     <MoveRight className="ml-2" />

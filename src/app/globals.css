@@ -59,14 +59,14 @@
   .responsive-container {
     @apply max-w-[30rem] md:max-w-[74rem] mx-auto px-10;
   }
-  .smart-track-card {
+  /* .smart-track-card {
     background: linear-gradient(
       165.75267095019893deg,
       rgb(253, 220, 91) 0%,
       rgb(255, 166, 39) 50%,
       rgb(255, 102, 98) 100%
     );
-  }
+  } */
 
   .noFee-card {
     background: linear-gradient(0deg, #1abcfa, #1c7df3);
@@ -91,4 +91,20 @@
       transform: translateY(40px);
     }
   }
+}
+
+.gradient-border-button {
+  position: relative;
+  background: linear-gradient(to top right, #675DFE, #7518ab, #ee5dfe);
+  padding: 2px;
+  border-radius: 9999px;
+}
+
+.gradient-border-button::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: white;
+  border-radius: 9999px;
+  z-index: -1;
 }

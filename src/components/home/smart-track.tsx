@@ -25,7 +25,7 @@ const SmartTrack = () => {
     <div ref={sectionRef} className="responsive-container mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <motion.div
-          className="smart-track-card rounded-[20px] md:rounded-[40px] p-5 md:p-10 flex flex-col justify-center text-center"
+          className="smart-track-card rounded-[20px] md:rounded-[40px] p-5 md:p-10 flex flex-col justify-center text-center bg-gradient-to-b from-[#675DFE] via-[#7518ab] to-[#ee5dfe]"
           style={{ y: smoothCardY }}
         >
           <h2 className="text-[40px] font-bold text-white">Smart Track</h2>
@@ -49,30 +49,30 @@ const SmartTrack = () => {
         <div className="flex flex-col justify-between gap-6">
           <motion.div
             style={{ y: smoothCardY }}
-            className="noFee-card rounded-[40px] p-10"
+            className="bg-gradient-to-b from-[#FB9A48] to-[#EC038B] rounded-[40px] p-10"
           >
             <h2 className="text-[40px] font-bold text-white leading-12">
-              No Fee
+              Fair Fees.
             </h2>
             <h2 className="text-[40px] font-bold text-white opacity-60 leading-12">
-              Not even
+              Bigger Payouts.
             </h2>
             <h2 className="text-[40px] font-bold text-white opacity-60 leading-12">
-              Hidden once
+              Earn smart, not small.
             </h2>
           </motion.div>
           <motion.div
             style={{ y: smoothCardY }}
-            className="daily-cash-card rounded-[40px] p-10"
+            className="bg-gradient-to-b from-[#38BA0B] to-[#195405] rounded-[40px] p-10"
           >
             <h2 className="text-[40px] font-bold text-white leading-12">
-              Daily Cash
+              Earn Daily.
             </h2>
             <h2 className="text-[40px] font-bold text-white opacity-60 leading-12">
-              Save and
+              Share More.
             </h2>
             <h2 className="text-[40px] font-bold text-white opacity-60 leading-12">
-              Earn interest
+              Make Even More.
             </h2>
           </motion.div>
         </div>

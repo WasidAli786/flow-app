@@ -21,13 +21,13 @@ const BalanceSection = () => {
 
   return (
     <>
-      <div className="responsive-container" ref={containerRef}>
+      <div className="responsive-container mt-60" ref={containerRef}>
         <motion.h2
           className="font-bold text-[5vw] md:text-5xl"
           style={{ y: contentY }}
         >
           Grow <br />
-          your balance
+          your earnings
         </motion.h2>
         <div className="relative grid md:grid-cols-2 bg-[#F5F5F7] rounded-[20px] md:rounded-[40px] p-5 md:px-[60px] md:py-[100px] overflow-hidden h-[450px] mt-14">
           <motion.div className="flex flex-col z-10" style={{ y: imageY }}>
@@ -35,8 +35,8 @@ const BalanceSection = () => {
               <NextImage src="/images/save-icon.png" alt="logo" />
             </div>
             <h6 className="text-[4vw] md:text-4xl font-bold mt-4 leading-tight">
-              Save it and <br />
-              Earn interest.
+              Rent smarter. <br />
+              Earn faster.
             </h6>
           </motion.div>
 

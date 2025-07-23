@@ -20,11 +20,11 @@ const CashManage = () => {
 
   return (
     <>
-      <div className="responsive-container" ref={containerRef}>
-        <div className="relative grid md:grid-cols-12 smart-track-card rounded-[20px] md:rounded-[40px] p-5 md:p-10 md:pr-0 overflow-hidden h-[450px]">
+      <div className="responsive-container " ref={containerRef}>
+        <div className="relative grid md:grid-cols-12 smart-track-card rounded-[20px] md:rounded-[40px] p-5 md:p-10 md:pr-0 overflow-hidden h-[450px] bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe]">
           <div className="flex flex-col z-10 col-span-5">
             <h2 className="text-[4vw] lg:text-5xl font-bold text-white">
-              Manage your cash easily
+              Your Business. In Your Pocket.
             </h2>
             <h3 className="text-lg lg:text-[26px] lg:font-bold text-white md:mt-4">
               Download an app now and the various benefits you will get

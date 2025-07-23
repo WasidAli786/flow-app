@@ -15,9 +15,18 @@ const icons = [
   "/images/story3.png",
 ];
 const texts = [
-  "Design to be loved for all elements",
-  "Integrate a secure payment gateway such as Stripe or PayPal",
-  "Created by Human & Powered with DayFlow",
+  {
+    title: "For Hosts",
+    description: "Designed for Hosts. Loved by Renters.",
+  },
+  {
+    title: "For Brokers",
+    description: "Grow Without Owning. Earn Without Limits.",
+  },
+  {
+    title: "For Affiliates",
+    description: "Share, Earn, Repeat — Smarter.",
+  },
 ];
 
 const FullStory = () => {
@@ -68,7 +77,11 @@ const FullStory = () => {
                 alt={`Icon ${index + 1}`}
                 className="w-18 h-18 object-contain"
               />
-              <p className="text-xl font-semibold">{texts[index]}</p>
+              <p className="text-xl font-semibold">
+                {texts[index].title}
+                <br />
+                {texts[index].description}
+              </p>
             </div>
           ))}
         </div>
@@ -89,7 +102,11 @@ const FullStory = () => {
                     <NextImage src={icons[index]} alt={`story${index}`} />
                   </div>
                   <h2 className="text-[32px] font-bold max-w-[400px]">
-                    {text}
+                    {texts[index].title}
+                    <br />
+                    <span className="text-lg text-gray-500">
+                      {texts[index].description}
+                    </span>
                   </h2>
                 </div>
               ))}
