@@ -29,19 +29,16 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between p-5">
             <div className="flex items-center gap-2">
-              <div className="relative h-14 w-14 rounded-full">
+              <div className="relative w-28 h-12">
                 <NextImage
-                  src="/images/logo.png"
+                  src="/images/logo-brokr.png"
                   alt="logo"
                   className="rounded-full"
                 />
               </div>
-              <h2 className={`text-2xl font-bold ${knewave.className}`}>
-                AppFlow
-              </h2>
             </div>
 
-            <ul className="hidden lg:flex items-center gap-8">
+            {/* <ul className="hidden lg:flex items-center gap-8">
               {navItems.map((item) => {
                 const isActive = pathname === item.path;
                 return (
@@ -57,9 +54,9 @@ const Navbar = () => {
                   </li>
                 );
               })}
-            </ul>
+            </ul> */}
 
-            <button className="hidden lg:flex group relative bg-[#ffa727] overflow-hidden items-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
+            <button className="hidden lg:flex group relative bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe] overflow-hidden items-center h-14 rounded-full text-white px-8 transition-all duration-300 cursor-pointer">
               <div className="flex items-center gap-2 transform transition-transform duration-300 group-hover:-translate-x-4">
                 <span className="flex items-center gap-1">
                   <AppleIcon className="text-4xl" />

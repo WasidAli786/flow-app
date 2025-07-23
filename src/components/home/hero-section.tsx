@@ -10,7 +10,7 @@ export default function HeroFullScrollMockup() {
     offset: ["start start", "end end"],
   });
 
-  const containerY = useTransform(scrollYProgress, [0, 0.15], ["14vh", "0vh"]);
+  const containerY = useTransform(scrollYProgress, [0, 0.15], ["22vh", "0vh"]);
   const rotateX = useTransform(scrollYProgress, [0, 0.15], [35, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.15], [1.3, 1]);
   const imageScrollY = useTransform(scrollYProgress, [0.15, 0.6], [0, -600]);
@@ -18,19 +18,32 @@ export default function HeroFullScrollMockup() {
   return (
     <section
       ref={sectionRef}
-      className="h-[200vh] relative bg-white pt-[116px]"
+      className="h-[400vh] relative bg-white py-28"
     >
-      <div className="relative z-10 max-w-6xl mx-auto px-4 pt-10 flex flex-col items-center text-center">
-        <h1 className="font-extrabold gradient-text text-[8vw] sm:text-[64px] leading-tight">
-          Powerful solutions
+      <div className="relative z-50 bg-white max-w-6xl mx-auto px-4 pt-10 flex flex-col items-center text-center">
+        <h1
+          className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-900 animate-fade-in-up opacity-0"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <span className="bg-clip-text text-transparent bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe]">
+            Discover Brokr — The{" "}
+          </span>
+          <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe]">
+            premier all-in-one
+          </span>
+          <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-tr from-[#675DFE] via-[#7518ab] to-[#ee5dfe]">
+            rental marketplace!
+          </span>
         </h1>
-        <h1 className="font-extrabold gradient-text text-[8vw] sm:text-[64px] leading-tight">
-          with seamless payment
-        </h1>
-        <p className="text-[5vw] sm:text-[22px] mt-6 max-w-3xl">
-          Financial experience with Appflow, the platform for those who expect
-          more from their money. Discover the smarter way to manage your
-          finances today.
+        <p
+          className="mt-6 text-lg md:text-xl text-black max-w-2xl mx-auto animate-fade-in-up opacity-0 pb-6"
+          style={{ animationDelay: "0.4s" }}
+        >
+          A platform designed to help travelers and locals find the perfect
+          rentals. Owners can easily manage and monetize their assets, while
+          brokers can grow their inventory and business without needing to own.
         </p>
       </div>
 
@@ -56,7 +69,7 @@ export default function HeroFullScrollMockup() {
 
             <div className="absolute top-[5%] left-[20%] w-[60%] h-[88.8%] rounded-[6.5%] overflow-hidden z-0">
               <motion.img
-                src="/images/mockup1.jpg"
+                src="/images/hero.png"
                 alt="App Screen"
                 style={{ y: imageScrollY }}
                 className="w-full h-auto"
